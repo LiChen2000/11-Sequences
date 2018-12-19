@@ -35,9 +35,9 @@ import math
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_sequence()
-    # run_test_count_items_bigger_than()
-    # run_test_count_positive_sines()
-    # run_test_sum_first_n()
+    run_test_count_items_bigger_than()
+    run_test_count_positive_sines()
+    run_test_sum_first_n()
 
 
 def run_test_sum_sequence():
@@ -231,6 +231,11 @@ def sum_sequence(sequence):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(len(sequence)):
+        total = total + sequence[k]
+
+    return total
 
 
 def run_test_count_items_bigger_than():
@@ -400,6 +405,12 @@ def count_items_bigger_than(numbers, threshold):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(len(numbers)):
+        if numbers[k] > threshold:
+            total = total + 1
+
+    return total
 
 
 def run_test_count_positive_sines():
@@ -530,7 +541,12 @@ def count_positive_sines(numbers):
     # TODO: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(len(numbers)):
+        if math.sin(numbers[k]) > 0:
+            total = total + 1
 
+    return total
 
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
@@ -638,6 +654,12 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(n):
+        total = total + numbers[k]
+
+    return total
+
 
 
 # -----------------------------------------------------------------------------
