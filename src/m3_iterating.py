@@ -5,7 +5,7 @@ in its most classic form:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
+         and Chen Li.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -106,6 +106,13 @@ def count_negatives(seq):
     # TODO: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    total = 0
+    for k in range(len(seq)):
+        if seq[k] < 0:
+            total = total + 1
+
+    return total
+
 
 
 def run_test_count_short_ones():
@@ -189,6 +196,7 @@ def run_test_count_short_ones():
     # -------------------------------------------------------------------------
 
 
+
 def count_short_ones(seq_of_lists):
     """
     What comes in:  An sequence of sequences.
@@ -213,6 +221,17 @@ def count_short_ones(seq_of_lists):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(len(seq_of_lists)):
+        if len(seq_of_lists[k]) < 3:
+            total = total + 1
+
+    return total
+
+
+
+
+
 
 
 def run_test_draw_circles():
@@ -294,6 +313,19 @@ def draw_circles(window, points, radius, color):
     # TODO: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    window
+    points
+    radius
+    color
+    for k in range(len(points)):
+        circle = rg.Circle(points[k], radius)
+        circle.fill_color = color
+        circle.attach_to(window)
+
+    window.render()
+
+
 
 
 # -----------------------------------------------------------------------------
